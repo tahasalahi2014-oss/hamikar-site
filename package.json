@@ -12,7 +12,8 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate deploy",
     "db:studio": "prisma studio",
-    "db:seed": "node prisma/seed.js"
+    "db:seed": "node prisma/seed.js",
+    "admin:create": "node prisma/create-admin.js"
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
