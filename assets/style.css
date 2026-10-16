@@ -15,3 +15,17 @@
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #10243a18}
 .logo{animation:hk-float 5s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Brand and account interface */
+.brand-logo{width:48px;height:48px;display:block;flex:none;border-radius:12px}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.btn-outline-dark{border:1px solid var(--line);color:var(--navy);background:#fff}
+.form [role=status]{min-height:1.5em;margin:4px 0}
+.form button:disabled{opacity:.6;cursor:wait}
+.order-card{margin-bottom:14px}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:13px}
+th,td{padding:12px;text-align:right;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f1f5f9;color:var(--navy)}
+td select{padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit}
+td form{display:flex;gap:8px;align-items:center}
