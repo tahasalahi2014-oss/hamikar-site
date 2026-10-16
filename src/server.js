@@ -103,7 +103,7 @@ app.post("/api/orders", auth, roles("CUSTOMER"), asyncRoute(async (req, res) => 
 }));
 
 app.patch("/api/orders/:id/status", auth, roles("ADMIN", "EXPERT"), asyncRoute(async (req, res) => {
-  const schema = z.object({ status: z.enum(["UNDER_REVIEW", "QUOTED", "AWAITING_PAYMENT", "IN_PROGRESS", "COMPLETED", "CANCELLED"]), quoteRial: z.number().int().positive().optional(), expertId: z.string().min(1).optional() });
+  const schema = z.object({ status: z.enum(["REQUESTED", "UNDER_REVIEW", "QUOTED", "AWAITING_PAYMENT", "IN_PROGRESS", "COMPLETED", "CANCELLED"]), quoteRial: z.number().int().positive().optional(), expertId: z.string().min(1).optional() });
   const parsed = schema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: "وضعیت یا مبلغ معتبر نیست." });
   const current = await prisma.order.findUnique({ where: { id: req.params.id } });
